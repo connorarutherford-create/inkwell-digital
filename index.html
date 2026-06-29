@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkwell Digital — One Task Per Week</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            background: #0a0a14;
+            color: #e4e4ec;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 680px; margin: 0 auto; padding: 2rem; }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            background: rgba(59,130,246,0.15);
+            border: 1px solid rgba(59,130,246,0.25);
+            color: #60a5fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+        }
+        h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8b8ba3;
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            margin-bottom: 0.5rem;
+        }
+        .price { font-size: 2.8rem; font-weight: 800; }
+        .price-note { color: #6b6b83; font-size: 0.9rem; }
+
+        .divider {
+            height: 1px;
+            background: rgba(255,255,255,0.06);
+            margin: 2rem 0;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .examples {
+            display: grid;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .example {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            font-size: 0.93rem;
+        }
+        .example .icon { flex-shrink: 0; margin-top: 1px; }
+
+        .how-it-works {
+            display: grid;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .step {
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .step-num {
+            position: absolute; left: 0; top: 0;
+            width: 28px; height: 28px;
+            background: rgba(59,130,246,0.15);
+            border: 1px solid rgba(59,130,246,0.25);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        .step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+        .step p { font-size: 0.88rem; color: #8b8ba3; }
+
+        .cta {
+            display: block;
+            text-align: center;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #fff;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            margin: 2rem 0 1rem;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .cta:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(59,130,246,0.3); }
+
+        .faq { margin-bottom: 2rem; }
+        .faq-q { font-weight: 600; margin-top: 1.2rem; margin-bottom: 0.3rem; font-size: 0.93rem; }
+        .faq-a { font-size: 0.88rem; color: #8b8ba3; }
+
+        .fine-print { font-size: 0.8rem; color: #4b4b63; text-align: center; margin-top: 2rem; }
+
+        @media (max-width: 500px) {
+            .container { padding: 1.5rem; }
+            .hero { min-height: auto; padding-top: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="badge">Inkwell Digital</div>
+            <h1>Your AI writes emails.<br>Mine <em>builds things.</em></h1>
+            <p class="subtitle">Stuck on something ChatGPT can't do? Describe it in writing, attach files, and I'll ship you a working result. No calls, no meetings, no back-and-forth. Just done.</p>
+
+            <div class="price-row">
+                <span class="price">$49</span>
+                <span class="price-note">/ month &middot; one task per week</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>Examples of tasks</h2>
+            <div class="examples">
+                <div class="example">
+                    <span class="icon">&#128200;</span>
+                    <span>Merge 20 messy spreadsheets into one clean, queryable database</span>
+                </div>
+                <div class="example">
+                    <span class="icon">&#128269;</span>
+                    <span>Scrape a website for pricing data every week and email changes</span>
+                </div>
+                <div class="example">
+                    <span class="icon">&#128196;</span>
+                    <span>Extract tables from 50 PDF invoices into a searchable CSV</span>
+                </div>
+                <div class="example">
+                    <span class="icon">&#9889;</span>
+                    <span>Build a Zapier/n8n workflow that connects tools that shouldn't</span>
+                </div>
+                <div class="example">
+                    <span class="icon">&#128203;</span>
+                    <span>Normalize a messy contact list — phone numbers, deduplication</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h2>How it works</h2>
+            <div class="how-it-works">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Send your task</h3>
+                    <p>Email me one thing that needs doing. Attach files, paste links, describe the outcome.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>I build it</h3>
+                    <p>No AI wrapper. No prompt engineering. I write code, run scripts, and produce a real deliverable.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>You get the result</h3>
+                    <p>Within 48 hours. Clean file, working script, or automation ready to run. No follow-up needed.</p>
+                </div>
+            </div>
+
+            <a class="cta" href="mailto:connorarutherford@gmail.com?subject=Inkwell%20-%20My%20First%20Task&body=Here's%20what%20I%20need%20done%3A">&#9993; Send Your First Task</a>
+            <p style="text-align:center; font-size:0.85rem; color:#6b6b83;">Reply within 48 hours. If it can't be done, you don't pay.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="faq">
+            <h2 style="margin-bottom: 0;">FAQs</h2>
+            <div class="faq-q">What counts as one task?</div>
+            <div class="faq-a">One discrete deliverable. "Merge these 20 CSV files" is one task. "Merge 20 files, then build a dashboard, then write a report" is three.</div>
+
+            <div class="faq-q">How fast do you deliver?</div>
+            <div class="faq-a">Within 48 hours. Most are done in under 12.</div>
+
+            <div class="faq-q">What if you can't do it?</div>
+            <div class="faq-a">I tell you within 24 hours. No charge for that week.</div>
+
+            <div class="faq-q">Can I pause or cancel?</div>
+            <div class="faq-a">Yes. Any time. No contracts.</div>
+
+            <div class="faq-q">What can't you do?</div>
+            <div class="faq-a">Phone calls, meetings, design work, video editing, creative direction. Written communication only. I do data, automation, code, and spreadsheets — all async.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="fine-print">
+            Inkwell Digital &mdash; connorarutherford@gmail.com
+        </div>
+    </div>
+</body>
+</html>
